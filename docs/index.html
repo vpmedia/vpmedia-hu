@@ -3,45 +3,256 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Software development and graphic design.">
-        <title>vpmedia - software development and graphic design</title>
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <meta name="description" content="Andras Csizmadia — full stack developer, DevOps and site reliability engineer with 20+ years of experience.">
+        <meta name="author" content="Andras Csizmadia">
+        <title>vpmedia — full stack development, DevOps &amp; SRE</title>
+        <link rel="apple-touch-icon" href="assets/img/vpmedia.png">
         <style>
+            :root {
+              --bg: #050505;
+              --panel: #0e0e0f;
+              --fg: #f2f2f2;
+              --muted: #9aa0a6;
+              --accent: #4f9ce8;
+              --heading: #a7cdf0;
+              --link: #5ab0ff;
+              --line: #232325;
+            }
+            * {
+              box-sizing: border-box;
+            }
             html,
             body {
-              height: 100%;
-              padding: 10px;
-              background-color: #000000;
-              font-family: system-ui, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: var(--bg);
+              font-family: system-ui, -apple-system, sans-serif;
             }
             body {
-              color: #FFFFFF;
-              text-shadow: 0 1px 3px rgba(0,0,0,.5);
+              color: var(--fg);
+              line-height: 1.65;
+              -webkit-font-smoothing: antialiased;
+            }
+            .container {
+              max-width: 780px;
+              margin: 0 auto;
+              padding: 56px 24px 80px;
+            }
+            header {
+              margin-bottom: 8px;
+            }
+            header img {
+              max-width: 200px;
+              height: auto;
+            }
+            section {
+              margin-top: 44px;
+            }
+            h2 {
+              margin: 0 0 4px;
+              font-size: .8rem;
+              font-weight: 600;
+              letter-spacing: .14em;
+              text-transform: uppercase;
+              color: var(--accent);
+            }
+            h3 {
+              margin: 0 0 8px;
+              font-size: .98rem;
+              font-weight: 600;
+              color: var(--heading);
+            }
+            p {
+              margin: 8px 0;
+            }
+            a {
+              color: var(--link);
+              text-decoration: none;
+            }
+            a:hover {
+              text-decoration: underline;
+            }
+            .lead {
+              font-size: 1.3rem;
+              line-height: 1.45;
+              font-weight: 500;
+              margin: 6px 0 12px;
+            }
+            .muted {
+              color: var(--muted);
             }
             ul {
+              margin: 6px 0;
+              padding-left: 18px;
+            }
+            li {
+              margin: 3px 0;
+            }
+            .skills {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 14px;
+              margin-top: 16px;
+            }
+            .card {
+              background: var(--panel);
+              border: 1px solid var(--line);
+              border-radius: 10px;
+              padding: 16px 18px;
+            }
+            .card ul {
+              margin: 0;
+              list-style: none;
+              padding-left: 0;
+            }
+            .card li {
+              color: var(--muted);
+              font-size: .92rem;
               padding-left: 14px;
+              position: relative;
+            }
+            .card li::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: .62em;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background: var(--accent);
+              opacity: .7;
+            }
+            .contact a {
+              display: inline-block;
+              margin-right: 18px;
+            }
+            .social {
+              margin-top: 18px;
+            }
+            .social a {
+              margin-right: 14px;
+              display: inline-block;
+              opacity: .85;
+              transition: opacity .15s ease;
+            }
+            .social a:hover {
+              opacity: 1;
+            }
+            .social img {
+              vertical-align: middle;
+            }
+            @media (max-width: 560px) {
+              .skills {
+                grid-template-columns: 1fr;
+              }
+              .container {
+                padding: 40px 20px 64px;
+              }
+              .lead {
+                font-size: 1.15rem;
+              }
             }
         </style>
     </head>
     <body>
     <div class="container">
-        <h1><img src="assets/img/vpmedia.png" alt="VPMedia" /></h1>
-        <h2>About</h2>
-        <p>With over 20 years of experience I am providing software development services.</p>
-        <a href="https://www.linkedin.com/in/vpmedia" target="_blank"><img src="assets/img/linkedin.png" alt="linkedin" /></a>
-        <a href="https://www.github.com/vpmedia" target="_blank"><img src="assets/img/github.png" alt="github" /></a>
-        <h2>Services</h2>
-        <h3>Software development</h3>
-        <ul>
-            <li>game development</li>
-            <li>web development</li>
-            <li>multimedia development</li>
-            <li>mobile applications</li>
-            <li>desktop applications</li>
-        </ul>
-        <h2>Contact</h2>
-        <a href="mailto:andras[at]vpmedia.hu" target="_self"><img src="assets/img/email.png" alt="email" /></a>
-        <br>
+        <header>
+            <img src="assets/img/vpmedia.png" alt="VPMedia">
+        </header>
+
+        <section>
+            <h2>About</h2>
+            <p class="lead">
+                Full stack developer, systems architect, site reliability
+                and DevOps engineer with over 20 years of experience.
+            </p>
+            <p class="muted">
+                I design, build and run software end to end: from systems and
+                software architecture, through React and Python application
+                code, game engines and AI-driven automation, down to the Linux
+                servers, Docker images, Ansible playbooks and observability
+                stack that keep a server fleet healthy in production.
+            </p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/vpmedia" target="_blank" rel="noopener"><img src="assets/img/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://www.github.com/vpmedia" target="_blank" rel="noopener"><img src="assets/img/github.png" alt="GitHub"></a>
+                <a href="mailto:andras@vpmedia.hu"><img src="assets/img/email.png" alt="Email"></a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Expertise</h2>
+            <div class="skills">
+                <div class="card">
+                    <h3>Systems &amp; architecture</h3>
+                    <ul>
+                        <li>Software &amp; systems architecture</li>
+                        <li>Distributed, service-based design</li>
+                        <li>API design &amp; data modelling</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Full stack development</h3>
+                    <ul>
+                        <li>TypeScript &amp; JavaScript, React, Next.js</li>
+                        <li>Node.js, Python &mdash; FastAPI, Flask</li>
+                        <li>MariaDB / MySQL, Redis, Prisma</li>
+                        <li>Database schema design &amp; management</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Game &amp; multimedia</h3>
+                    <ul>
+                        <li>Phaser &amp; Pixi.js, WebGL / Canvas</li>
+                        <li>Web &amp; HTML5 game development</li>
+                        <li>Asset &amp; bitmap font pipelines</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Server management &amp; SRE</h3>
+                    <ul>
+                        <li>Linux server administration</li>
+                        <li>Docker, Ansible, nginx, certbot / TLS</li>
+                        <li>Server fleet operations &amp; CI/CD</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Observability</h3>
+                    <ul>
+                        <li>OpenTelemetry instrumentation</li>
+                        <li>Prometheus, Grafana, Alertmanager</li>
+                        <li>Loki, Tempo, Alloy, Sentry</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>AI engineering &amp; automation</h3>
+                    <ul>
+                        <li>Agentic coding workflows &amp; MCP tooling</li>
+                        <li>LLM-assisted development at scale</li>
+                        <li>Infrastructure as code &amp; scripted ops</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Open source</h2>
+            <p class="muted">
+                I maintain a range of open source libraries and tools &mdash;
+                game engine ports, asset pipelines and developer utilities &mdash;
+                published on <a href="https://www.github.com/vpmedia" target="_blank" rel="noopener">GitHub</a>
+                and the <a href="https://www.npmjs.com/~vpmedia" target="_blank" rel="noopener">@vpmedia</a> npm scope.
+            </p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p class="contact">
+                <a href="mailto:andras@vpmedia.hu">andras@vpmedia.hu</a>
+                <a href="https://www.linkedin.com/in/vpmedia" target="_blank" rel="noopener">linkedin.com/in/vpmedia</a>
+                <a href="https://www.github.com/vpmedia" target="_blank" rel="noopener">github.com/vpmedia</a>
+            </p>
+        </section>
     </div>
     </body>
 </html>
