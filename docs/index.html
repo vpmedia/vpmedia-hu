@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Andras Csizmadia — full stack developer, DevOps and site reliability engineer with 20+ years of experience.">
-        <meta name="author" content="Andras Csizmadia">
-        <title>vpmedia — full stack development, DevOps &amp; SRE</title>
+        <meta name="description" content="András Csizmadia — Principal Engineer: systems architecture, full stack development, DevOps and SRE for regulated online gaming, with 22+ years of experience.">
+        <meta name="author" content="András Csizmadia">
+        <title>András Csizmadia — Principal Engineer</title>
         <link rel="apple-touch-icon" href="assets/img/vpmedia.png">
         <style>
             :root {
@@ -55,14 +55,61 @@
               color: var(--muted);
               font-size: .95rem;
             }
-            .availability {
-              display: inline-block;
-              margin: 14px 0 2px;
+            .role {
+              margin: 0;
+              color: var(--heading);
+              font-size: 1rem;
+              font-weight: 500;
+            }
+            .stats {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+              margin: 18px 0 4px;
+              padding: 0;
+              list-style: none;
+            }
+            .stats li {
+              margin: 0;
               padding: 4px 13px;
-              border: 1px solid var(--accent);
+              border: 1px solid var(--line);
               border-radius: 999px;
-              color: var(--link);
+              color: var(--muted);
               font-size: .85rem;
+            }
+            .stats strong {
+              color: var(--fg);
+              font-weight: 600;
+            }
+            .job {
+              margin-top: 16px;
+            }
+            .job-title {
+              margin: 0;
+              font-size: 1.05rem;
+              font-weight: 600;
+            }
+            .job-meta {
+              margin: 0 0 10px;
+              color: var(--muted);
+              font-size: .92rem;
+            }
+            .area {
+              margin-top: 14px;
+              padding-left: 16px;
+              border-left: 2px solid var(--line);
+            }
+            .area h3 {
+              margin-bottom: 2px;
+            }
+            .area .period {
+              color: var(--muted);
+              font-weight: 400;
+              font-size: .85rem;
+            }
+            .area ul {
+              color: var(--muted);
+              font-size: .93rem;
             }
             section {
               margin-top: 44px;
@@ -178,30 +225,96 @@
         <header>
             <img src="assets/img/vpmedia.png" alt="VPMedia">
             <p class="name">András Csizmadia</p>
+            <p class="role">Principal Engineer</p>
             <p class="location">Budapest, Hungary</p>
         </header>
 
         <section>
             <h2>About</h2>
             <p class="lead">
-                Full stack developer, systems architect, site reliability
-                and DevOps engineer with over 22 years of experience.
+                Principal Engineer with over 22 years of experience across
+                systems architecture, full stack development, DevOps and site
+                reliability engineering.
             </p>
             <p class="muted">
                 I design, build and run software end to end: from systems and
-                software architecture, through React and Python application
-                code, game engines and AI-driven automation, down to the Linux
-                servers, Docker images, Ansible playbooks and observability
-                stack that keep a server fleet healthy in production. Over the
-                years I have architected and operated large-scale, multi-service
-                production platforms &mdash; dozens of services running across a
-                dedicated server fleet.
+                software architecture, through TypeScript, React and Python
+                application code, game engines and AI-driven automation, down to
+                the Linux servers, Docker images, Ansible playbooks and
+                observability stack that keep a production fleet healthy. For the
+                last decade I have been the technical lead behind a regulated
+                online gaming platform &mdash; casino games, live dealer studio
+                games, the player-facing casino, its wallet and its compliance
+                tooling &mdash; and the infrastructure that runs all of it.
             </p>
-            <p class="availability">Available for freelance &amp; remote work</p>
+            <ul class="stats">
+                <li><strong>22+</strong> years in software</li>
+                <li><strong>10</strong> years in regulated gaming</li>
+                <li><strong>40+</strong> services &amp; libraries owned</li>
+            </ul>
             <div class="social">
                 <a href="https://www.linkedin.com/in/vpmedia" target="_blank" rel="noopener"><img src="assets/img/linkedin.png" alt="LinkedIn"></a>
                 <a href="https://www.github.com/vpmedia" target="_blank" rel="noopener"><img src="assets/img/github.png" alt="GitHub"></a>
                 <a href="mailto:andras@vpmedia.hu"><img src="assets/img/email.png" alt="Email"></a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="job">
+                <p class="job-title">Principal Engineer</p>
+                <p class="job-meta">Netherlands-based online gaming company &middot; 2016 &ndash; present</p>
+                <p class="muted">
+                    Joined to build the casino game clients and grew into owning
+                    the architecture, the codebase and the operations of the
+                    whole product estate: games, live studio, casino platform and
+                    infrastructure.
+                </p>
+
+                <div class="area">
+                    <h3>Online casino platform <span class="period">&middot; 2025 &ndash; present</span></h3>
+                    <ul>
+                        <li>Player-facing casino in Next.js, shipped to iOS and Android through a Capacitor native shell, with a headless CMS for its content</li>
+                        <li>Back office for operations, payments, campaigns, CRM, customer support and the compliance disciplines: responsible gaming, AML and risk</li>
+                        <li>Seamless wallet service implementing eight third-party game provider wallet protocols, idempotent and replay-safe</li>
+                        <li>Cross-supplier must-hit jackpot, and an append-only, hash-chained ledger for regulatory reporting</li>
+                        <li>ISO 27001 / ISO 9001 management system with an on-premise LLM drafting policy documents for human approval</li>
+                        <li>Remote MCP server with OAuth that brings live business KPIs into AI assistants</li>
+                    </ul>
+                </div>
+
+                <div class="area">
+                    <h3>Live dealer games <span class="period">&middot; 2022 &ndash; present</span></h3>
+                    <ul>
+                        <li>Real-time live blackjack and roulette: Fastify and Socket.IO game servers, React player clients and a live table lobby</li>
+                        <li>Studio operator console and session orchestration between dealers and players</li>
+                        <li>C# / .NET Windows service controlling the studio hardware &mdash; serial peripherals and SDI video switchers</li>
+                        <li>Roulette wheel simulator speaking the physical wheel&rsquo;s serial protocol, so the studio stack is tested without hardware</li>
+                        <li>Prisma-managed schema and migrations shared by every live game service</li>
+                    </ul>
+                </div>
+
+                <div class="area">
+                    <h3>Casino games <span class="period">&middot; 2016 &ndash; present</span></h3>
+                    <ul>
+                        <li>Phaser-based HTML5 slot, keno and lucky wheel game clients, and the game management admin</li>
+                        <li>Python / Flask game server and a dependency-free cryptographic random number generator behind every drawn outcome</li>
+                        <li>Free-to-play football predictor game with weekly leaderboards</li>
+                        <li>Cross-device compatibility testing on real mobile and desktop browsers with Appium</li>
+                    </ul>
+                </div>
+
+                <div class="area">
+                    <h3>Infrastructure, platform &amp; developer experience</h3>
+                    <ul>
+                        <li>Development, staging and production environments on a dedicated server fleet and on-premise Proxmox virtualisation, provisioned with Ansible and run on Docker Compose</li>
+                        <li>Full observability stack &mdash; Prometheus, Alertmanager, Grafana, Loki, Tempo and Alloy &mdash; fed by a shared OpenTelemetry runtime package every service runs on</li>
+                        <li>Shared libraries per product family and one shadcn/ui + Tailwind component kit across the admin applications</li>
+                        <li>CI/CD on GitHub Actions with reusable workflows, SHA-pinned actions, digest-pinned images and automated dependency upkeep</li>
+                        <li>A developer-experience CLI that scaffolds, syncs, builds and deploys the 40+ repositories from one inventory</li>
+                        <li>AI-native engineering: specialised coding agents for architecture, implementation, review and security audit, working to estate-wide conventions</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -217,28 +330,48 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Full stack development</h3>
+                    <h3>Technical leadership</h3>
                     <ul>
-                        <li>TypeScript &amp; JavaScript, React, Next.js</li>
-                        <li>Node.js, Python &mdash; FastAPI, Flask</li>
-                        <li>MariaDB / MySQL, Redis, Prisma</li>
-                        <li>Database schema design &amp; management</li>
+                        <li>Estate-wide engineering standards</li>
+                        <li>Security by default &amp; code review</li>
+                        <li>Developer onboarding &amp; tooling</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Game &amp; multimedia</h3>
+                    <h3>Full stack development</h3>
+                    <ul>
+                        <li>TypeScript &amp; JavaScript, React, Next.js</li>
+                        <li>Node.js &mdash; Fastify, Socket.IO</li>
+                        <li>Python &mdash; FastAPI, Flask; C# / .NET</li>
+                        <li>MariaDB / MySQL, Redis, Prisma</li>
+                        <li>Capacitor for iOS &amp; Android, Strapi CMS</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Game &amp; real-time</h3>
                     <ul>
                         <li>Phaser &amp; Pixi.js, WebGL / Canvas</li>
-                        <li>Web &amp; HTML5 game development</li>
+                        <li>HTML5 casino &amp; live dealer games</li>
+                        <li>Real-time game servers &amp; studio hardware</li>
                         <li>Asset &amp; bitmap font pipelines</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Regulated gaming</h3>
+                    <ul>
+                        <li>Wallet &amp; game provider integrations</li>
+                        <li>RNG, jackpots &amp; round state machines</li>
+                        <li>AML, responsible gaming &amp; reporting</li>
+                        <li>ISO 27001 information security</li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3>Server management &amp; SRE</h3>
                     <ul>
                         <li>Linux server administration</li>
-                        <li>Docker, Ansible, nginx, certbot / TLS</li>
-                        <li>Server fleet operations &amp; CI/CD</li>
+                        <li>Docker, Ansible, nginx, Proxmox, Cloudflare</li>
+                        <li>Server fleet operations</li>
+                        <li>CI/CD with GitHub Actions, supply chain pinning</li>
                     </ul>
                 </div>
                 <div class="card">
@@ -252,8 +385,9 @@
                 <div class="card">
                     <h3>AI engineering &amp; automation</h3>
                     <ul>
-                        <li>Agentic coding workflows &amp; MCP tooling</li>
-                        <li>LLM-assisted development at scale</li>
+                        <li>Multi-agent coding workflows &amp; Claude Code</li>
+                        <li>MCP servers, OAuth &amp; MCP Apps</li>
+                        <li>On-premise LLMs (vLLM, Ollama) &amp; RAG</li>
                         <li>Infrastructure as code &amp; scripted ops</li>
                     </ul>
                 </div>
@@ -264,8 +398,10 @@
             <h2>Open source</h2>
             <p class="muted">
                 I maintain a range of open source libraries and tools &mdash;
-                game engine ports, asset pipelines and developer utilities &mdash;
-                published on <a href="https://www.github.com/vpmedia" target="_blank" rel="noopener">GitHub</a>
+                a modern ECMAScript port of the Phaser 2 game engine, runtime
+                bitmap font and asset manifest generators, an asyncio
+                MySQL / MariaDB driver with replication support, and a Prisma
+                schema naming tool &mdash; published on <a href="https://www.github.com/vpmedia" target="_blank" rel="noopener">GitHub</a>
                 and the <a href="https://www.npmjs.com/~vpmedia" target="_blank" rel="noopener">@vpmedia</a> npm scope.
             </p>
         </section>
