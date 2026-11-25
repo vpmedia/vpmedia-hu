@@ -81,36 +81,6 @@
               color: var(--fg);
               font-weight: 600;
             }
-            .job {
-              margin-top: 16px;
-            }
-            .job-title {
-              margin: 0;
-              font-size: 1.05rem;
-              font-weight: 600;
-            }
-            .job-meta {
-              margin: 0 0 10px;
-              color: var(--muted);
-              font-size: .92rem;
-            }
-            .area {
-              margin-top: 14px;
-              padding-left: 16px;
-              border-left: 2px solid var(--line);
-            }
-            .area h3 {
-              margin-bottom: 2px;
-            }
-            .area .period {
-              color: var(--muted);
-              font-weight: 400;
-              font-size: .85rem;
-            }
-            .area ul {
-              color: var(--muted);
-              font-size: .93rem;
-            }
             section {
               margin-top: 44px;
             }
@@ -256,65 +226,6 @@
                 <a href="https://www.linkedin.com/in/vpmedia" target="_blank" rel="noopener"><img src="assets/img/linkedin.png" alt="LinkedIn"></a>
                 <a href="https://www.github.com/vpmedia" target="_blank" rel="noopener"><img src="assets/img/github.png" alt="GitHub"></a>
                 <a href="mailto:andras@vpmedia.hu"><img src="assets/img/email.png" alt="Email"></a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Experience</h2>
-            <div class="job">
-                <p class="job-title">Principal Engineer</p>
-                <p class="job-meta">Netherlands-based online gaming company &middot; 2016 &ndash; present</p>
-                <p class="muted">
-                    Joined to build the casino game clients and grew into owning
-                    the architecture, the codebase and the operations of the
-                    whole product estate: games, live studio, casino platform and
-                    infrastructure.
-                </p>
-
-                <div class="area">
-                    <h3>Online casino platform <span class="period">&middot; 2025 &ndash; present</span></h3>
-                    <ul>
-                        <li>Player-facing casino in Next.js, shipped to iOS and Android through a Capacitor native shell, with a headless CMS for its content</li>
-                        <li>Back office for operations, payments, campaigns, CRM, customer support and the compliance disciplines: responsible gaming, AML and risk</li>
-                        <li>Seamless wallet service implementing eight third-party game provider wallet protocols, idempotent and replay-safe</li>
-                        <li>Cross-supplier must-hit jackpot, and an append-only, hash-chained ledger for regulatory reporting</li>
-                        <li>ISO 27001 / ISO 9001 management system with an on-premise LLM drafting policy documents for human approval</li>
-                        <li>Remote MCP server with OAuth that brings live business KPIs into AI assistants</li>
-                    </ul>
-                </div>
-
-                <div class="area">
-                    <h3>Live dealer games <span class="period">&middot; 2022 &ndash; present</span></h3>
-                    <ul>
-                        <li>Real-time live blackjack and roulette: Fastify and Socket.IO game servers, React player clients and a live table lobby</li>
-                        <li>Studio operator console and session orchestration between dealers and players</li>
-                        <li>C# / .NET Windows service controlling the studio hardware &mdash; serial peripherals and SDI video switchers</li>
-                        <li>Roulette wheel simulator speaking the physical wheel&rsquo;s serial protocol, so the studio stack is tested without hardware</li>
-                        <li>Prisma-managed schema and migrations shared by every live game service</li>
-                    </ul>
-                </div>
-
-                <div class="area">
-                    <h3>Casino games <span class="period">&middot; 2016 &ndash; present</span></h3>
-                    <ul>
-                        <li>Phaser-based HTML5 slot, keno and lucky wheel game clients, and the game management admin</li>
-                        <li>Python / Flask game server and a dependency-free cryptographic random number generator behind every drawn outcome</li>
-                        <li>Free-to-play football predictor game with weekly leaderboards</li>
-                        <li>Cross-device compatibility testing on real mobile and desktop browsers with Appium</li>
-                    </ul>
-                </div>
-
-                <div class="area">
-                    <h3>Infrastructure, platform &amp; developer experience</h3>
-                    <ul>
-                        <li>Development, staging and production environments on a dedicated server fleet and on-premise Proxmox virtualisation, provisioned with Ansible and run on Docker Compose</li>
-                        <li>Full observability stack &mdash; Prometheus, Alertmanager, Grafana, Loki, Tempo and Alloy &mdash; fed by a shared OpenTelemetry runtime package every service runs on</li>
-                        <li>Shared libraries per product family and one shadcn/ui + Tailwind component kit across the admin applications</li>
-                        <li>CI/CD on GitHub Actions with reusable workflows, SHA-pinned actions, digest-pinned images and automated dependency upkeep</li>
-                        <li>A developer-experience CLI that scaffolds, syncs, builds and deploys the 40+ repositories from one inventory</li>
-                        <li>AI-native engineering: specialised coding agents for architecture, implementation, review and security audit, working to estate-wide conventions</li>
-                    </ul>
-                </div>
             </div>
         </section>
 
